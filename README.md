@@ -8,8 +8,15 @@ A Node.js library.
 
 ## Clone and Test
 
+Clone into tlonode directory.
+
 ```
-$ git clone --branch develop <url/to/tlonode.git> # clone into tlonode directory
+$ git clone --branch develop <url/to/tlonode.git>
+```
+
+Run tests.
+
+```
 $ cd tlonode
 $ npm install
 $ npm test
