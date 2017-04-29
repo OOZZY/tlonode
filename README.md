@@ -19,5 +19,5 @@ Run tests.
 ```
 $ cd tlonode
 $ npm install
-$ npm test
+$ NODE_PATH=. npm test
 ```
