@@ -2,7 +2,8 @@
   "name": "tlonode",
   "version": "0.0.0",
   "devDependencies": {
-    "mocha": "latest"
+    "mocha": "latest",
+    "chai": "latest"
   },
   "scripts": {
     "test": "mocha"
