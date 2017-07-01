@@ -6,9 +6,14 @@ const tlostatistics = require('tlo/statistics');
 const EPSILON = Number.EPSILON;
 
 describe('tlo/statistics', function() {
+  var statistics;
+
+  beforeEach(function() {
+    statistics = new tlostatistics.Statistics;
+  });
+
   describe('Statistics constructor', function() {
     it('should initialize statistics', function () {
-      var statistics = new tlostatistics.Statistics;
       assert.closeTo(statistics.size, 0, EPSILON);
       assert.isNull(statistics.sum);
       assert.isNull(statistics.mean);
@@ -22,7 +27,6 @@ describe('tlo/statistics', function() {
 
   describe('Statistics add', function() {
     it('should update statistics over one call', function () {
-      var statistics = new tlostatistics.Statistics;
       statistics.add(50.0);
       assert.closeTo(statistics.size, 1, EPSILON);
       assert.closeTo(statistics.sum, 50, EPSILON);
@@ -35,7 +39,6 @@ describe('tlo/statistics', function() {
     });
 
     it('should update statistics over multiple calls', function () {
-      var statistics = new tlostatistics.Statistics;
       statistics.add(50.0);
       statistics.add(100.0);
       assert.closeTo(statistics.size, 2, EPSILON);
